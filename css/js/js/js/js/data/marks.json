@@ -1,0 +1,5 @@
+{
+  "attendance": 92,
+  "months": ["Jan", "Feb", "Mar", "Apr", "May", "Jun", "Jul", "Aug"],
+  "marks": [70, 75, 78, 82, 85, 87, 90, 92]
+}
