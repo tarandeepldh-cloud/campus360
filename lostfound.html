@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Campus360 — Lost & Found</title>
+  <link rel="stylesheet" href="css/style.css" />
+</head>
+<body>
+  <header class="topbar">
+    <div class="topbar-left">
+      <a href="dashboard.html" class="brand">Campus360</a>
+      <nav class="nav">
+        <a href="dashboard.html" class="nav-link">Dashboard</a>
+        <a href="events.html" class="nav-link">Events</a>
+        <a href="lostfound.html" class="nav-link active">Lost & Found</a>
+      </nav>
+    </div>
+    <div class="topbar-right">
+      <span id="usernameBadge" class="badge"></span>
+      <button id="logoutBtn" class="btn small">Logout</button>
+    </div>
+  </header>
+
+  <main class="container">
+    <section class="grid two-col">
+      <div class="card">
+        <h2 class="section-title">Report lost item</h2>
+        <form id="lostForm" class="form-grid">
+          <label class="label">Item</label>
+          <input type="text" id="lostItem" placeholder="e.g., Backpack" required />
+
+          <label class="label">Location</label>
+          <input type="text" id="lostLocation" placeholder="e.g., Library" required />
+
+          <div class="actions">
+            <button type="submit" class="btn primary">Add</button>
+            <button type="button" id="clearLostBtn" class="btn danger">Clear my added</button>
+          </div>
+          <p class="hint">Sample list loads from lostfound.json. Your added items are saved only in your browser.</p>
+        </form>
+      </div>
+
+      <div class="card">
+        <h2 class="section-title">Lost & found list</h2>
+        <ul id="lostList" class="list"></ul>
+      </div>
+    </section>
+  </main>
+
+  <script src="js/auth.js"></script>
+  <script src="js/lostfound.js"></script>
+  <script>
+    window.addEventListener('DOMContentLoaded', () => {
+      ensureAuth();
+      initLostFound();
+    });
+  </script>
+</body>
+</html>
