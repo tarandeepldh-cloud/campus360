@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Campus360 — Login</title>
+  <link rel="stylesheet" href="css/style.css" />
+</head>
+<body class="login-page">
+  <main class="container narrow">
+    <h1 class="brand">Campus360</h1>
+    <p class="subtitle">Simple campus dashboard — no signup required.</p>
+
+    <form id="loginForm" class="card">
+      <label for="username" class="label">Username</label>
+      <input id="username" name="username" type="text" placeholder="Enter your name" required />
+
+      <div class="actions">
+        <button type="submit" class="btn primary">Enter</button>
+        <button type="button" id="demoBtn" class="btn">Demo</button>
+      </div>
+
+      <p class="hint">Your name is saved only in your browser.</p>
+    </form>
+  </main>
+
+  <script src="js/auth.js"></script>
+  <script>
+    // Initialize login handlers
+    window.addEventListener('DOMContentLoaded', () => {
+      setupLogin();
+    });
+  </script>
+</body>
+</html>
